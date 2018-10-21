@@ -2,6 +2,9 @@
 
 #include <stdio.h>
 
+#ifdef __cplusplus
+extern "C" {
+#endif
 enum {
 	LEDTAG_DEV_NONE, LEDTAG_DEV_M1_8, LEDTAG_NDEV
 };
@@ -84,4 +87,7 @@ int ledbadge_validate(
 
 int ledbadge_flash(
 		ledbadge_t *self);
+#ifdef __cplusplus
+}
+#endif
 
